@@ -1,12 +1,13 @@
 import InputField from "../components/Form/InputField";
 import Button from "../components/Button";
 import Link from "next/link";
+import { login, signup } from "./actions";
 
-export default function Login() {
+export default async function Login() {
   return (
     <form>
       <InputField
-        id="loginId"
+        id="loginEmail"
         type="email"
         placeholder="pelda@pelda.hu"
         labelText="Adja meg Email címét"
@@ -17,9 +18,8 @@ export default function Login() {
         placeholder="jelszo"
         labelText="Adja meg a jelszavát"
       />
-      <Link href="/">
-        <Button text="Bejelentkezés" />
-      </Link>
+        <button formAction={login}>Bejelentkezés </button>
+        <button formAction={signup}>Regisztráció </button>
     </form>
   );
 }

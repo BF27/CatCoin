@@ -12,7 +12,7 @@ export default function InputField({
   return (
     <div className="flex flex-col">
       <label htmlFor={id}>{labelText}</label>
-      <input id={id} type={type} placeholder={placeholder} />
+      <input id={id} name={id} type={type} placeholder={placeholder} />
     </div>
   );
 }
