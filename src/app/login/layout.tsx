@@ -1,4 +1,8 @@
 import type { Metadata } from "next";
+import { Rubik } from "next/font/google";
+import "./styles.css";
+
+const rubik = Rubik({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "CatCoin | Bejelentkezés",
@@ -12,11 +16,10 @@ export default function LoginLayout({
 }>) {
   return (
     <html lang="hu">
-      <body className="flex justify-center">
-        <div className="container flex flex-col items-center">
-          <h1>Bejelentkezés</h1>
+      <body className="flex items-center justify-center h-screen">
+        <main className={rubik.className + " " + "bg-white rounded-4xl container py-20 px-16"}>
           {children}
-        </div>
+        </main>
       </body>
     </html>
   );

@@ -1,0 +1,11 @@
+h2 {
+  font-size: 48px;
+}
+
+h3 {
+  font-size: 20px;
+}
+
+div:has(> input) {
+  border: 4px solid #ec9e70;
+}
